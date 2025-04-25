@@ -23,10 +23,10 @@ jobs:
         run: poetry run black --check .
 
       - name: Run tests
-        run: poetry run pytest pygraph.py --cov=pygraph
+        run: pytest -r P --cov=pygraph
 
       - name: Generate docs
-        run: poetry run pdoc --html pygraph -o html/pygraph
+        run: pdoc --html pygraph
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
