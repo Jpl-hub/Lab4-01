@@ -17,16 +17,16 @@ jobs:
         run: pip install poetry
 
       - name: Install dependencies
-        run: poetry install
+        run: poetry install --no-interaction --no-root
 
       - name: Check formatting
         run: poetry run black --check .
 
       - name: Run tests
-        run: pytest -r P --cov=pygraph
+        run: poetry run pytest -r P --cov=pygraph  # 关键修复：添加 poetry run
 
       - name: Generate docs
-        run: pdoc --html pygraph
+        run: poetry run pdoc --html pygraph -o html/pygraph  # 明确输出目录
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
