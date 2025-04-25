@@ -1,13 +1,13 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0  # 升级到兼容 Python 3.8 的版本
+    rev: v4.4.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
   - repo: https://github.com/psf/black
-    rev: 23.9.1  # 使用支持 Python 3.8 的 black 版本
+    rev: 23.9.1  # 指定兼容 Python 3.8 的版本
     hooks:
       - id: black
-        language_version: python3.8  # 明确指定 Python 版本
+        language_version: python3.8  # 明确 Python 版本
