@@ -1,3 +1,4 @@
+# .pre-commit-config.yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -7,6 +8,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/psf/black
-    rev: 23.9.1  # 指定兼容 Python 3.8 的版本
+    rev: 24.4.2
     hooks:
       - id: black
+        args: [--check]
