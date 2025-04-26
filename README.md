@@ -9,4 +9,3 @@ pre-commit install             # install pre-commit hooks
 black .                        # lint all Python code
 pytest -r P --cov=pygraph      # run all tests with test stdout and coverage report
 python -m pdoc --html pygraph  # build API documentation and deploy to html/
----
